@@ -1,0 +1,8 @@
+flask
+tensorflow
+pandas
+prometheus_client
+numpy
+scikit-learn
+matplotlib
+seaborn

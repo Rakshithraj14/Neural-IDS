@@ -30,7 +30,7 @@ project/
 
  1. Install Required Python Libraries
 ```bash
-pip install flask tensorflow pandas prometheus_client
+pip install -r requirements.txt
 ```
 > **Note:** Ensure Python version is **3.10** or **3.11** for TensorFlow compatibility.
 
@@ -39,6 +39,9 @@ pip install flask tensorflow pandas prometheus_client
 cd C:\Users\<YourUsername>\Desktop\project
 python app.py
 ```
+- **Note on `app.py` behavior:**
+  - The Flask application (`app.py`) has been refactored to load the machine learning model and the dataset only once upon startup. This improves efficiency by avoiding repeated loading.
+  - For demonstration in the `/metrics` endpoint, predictions are now made on a randomly selected sequence of 10 data instances from the preprocessed dataset. This better simulates dynamic, real-time input compared to using a static set of rows.
 - Access metrics at: [http://localhost:5000/metrics](http://localhost:5000/metrics)
 
 
